@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json bun.lockb ./
 
 # Install dependencies
-RUN bun install --frozen-lockfile
+RUN bun install
 
 # Copy the rest of the project files
 COPY . .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Run the application
-CMD ["bun", "dev"]
+CMD ["bun", "run", "start"]
