@@ -1,13 +1,11 @@
 services:
-  bun-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  app:
+    build: .
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-      - /app/node_modules # Prevent local node_modules from overwriting container
-    environment:
-      - NODE_ENV=development
-    command: ["bun", "dev"]
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true
