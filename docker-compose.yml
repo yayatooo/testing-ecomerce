@@ -1,8 +1,6 @@
 services:
-  app:
+  ecommerce-testing:
     build: .
-    ports:
-      - "3000:3000"
     networks:
       - proxy-network
 

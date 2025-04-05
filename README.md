@@ -13,3 +13,26 @@ bun run dev
 ```
 
 Open http://localhost:3000/ with your browser to see the result.
+
+# Script Installation App
+
+``` 
+cd /
+mkdir docker 
+cd docker
+git clone repo-name
+cd repo-name
+docker compos  up -d
+```
+
+
+# Script Installation Proxy Manager
+
+```
+cd /docker
+mkdir nginx-proxy-manager
+cd nginx proxy-manager
+
+docker compose up -d
+```
+
