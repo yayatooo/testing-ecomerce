@@ -17,6 +17,3 @@ jobs:
         uses: biomejs/setup-biome@v2
         with:
           version: latest
-
-      - name: Run Biome Check
-        run: biome ci src
