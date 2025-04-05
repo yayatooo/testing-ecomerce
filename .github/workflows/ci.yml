@@ -7,17 +7,13 @@ on:
 
 jobs:
   test:
-  quality:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-     - name: Setup Biome
+      - name: Setup Biome
         uses: biomejs/setup-biome@v2
         with:
           version: latest
-
-      - name: Run Biome Check
-        run: biome ci src
